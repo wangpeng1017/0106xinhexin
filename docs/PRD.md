@@ -1,6 +1,6 @@
 # 新核芯知识库智能体系统 产品需求文档 (PRD)
 
-> 最后更新: 2026-01-06 | 版本: 1.0
+> 最后更新: 2026-01-06 | 版本: 1.1
 
 ---
 
@@ -45,45 +45,53 @@
 
 | ID | 功能 | 状态 | 优先级 | 对应代码 |
 |----|------|------|--------|----------|
-| KB-001 | 多层级分类 | 🔴 | P0 | - |
-| KB-002 | 领域划分 | 🔴 | P0 | - |
+| KB-001 | 多层级分类 | 🟡 | P0 | frontend/src/app/admin/knowledge/page.tsx |
+| KB-002 | 领域划分 | 🟡 | P0 | frontend/src/app/admin/knowledge/page.tsx |
 | KB-003 | 自定义层级 | 🔴 | P1 | - |
-| KB-004 | 多格式支持 | 🔴 | P0 | - |
+| KB-004 | 多格式支持 | 🟡 | P0 | frontend/src/app/admin/knowledge/page.tsx (UI) |
 | KB-005 | 全文检索 | 🔴 | P0 | - |
 | KB-006 | 版本管理 | 🔴 | P2 | - |
+
+> 💡 KB-001/002/004 前端UI已完成，展示13种文件格式和AI提取状态
 
 #### 2.2 智能体系统
 
 | ID | 功能 | 状态 | 优先级 | 对应代码 |
 |----|------|------|--------|----------|
-| AG-001 | 智能体创建 | 🔴 | P0 | - |
-| AG-002 | 权限控制 | 🔴 | P0 | - |
-| AG-003 | 多轮对话 | 🔴 | P0 | - |
-| AG-004 | 图纸检索 | 🔴 | P1 | - |
-| AG-005 | 工艺查询 | 🔴 | P1 | - |
-| AG-006 | 入职助手 | 🔴 | P1 | - |
-| AG-007 | IT帮助台 | 🔴 | P1 | - |
+| AG-001 | 智能体创建 | 🟡 | P0 | frontend/src/app/admin/agents/page.tsx |
+| AG-002 | 权限控制 | 🟡 | P0 | frontend/src/app/admin/agents/page.tsx |
+| AG-003 | 多轮对话 | 🟡 | P0 | frontend/src/app/chat/page.tsx |
+| AG-004 | 图纸检索 | 🟡 | P1 | frontend/src/app/admin/agents/page.tsx (图纸解读智能体) |
+| AG-005 | 工艺查询 | 🟡 | P1 | frontend/src/app/admin/agents/page.tsx (工艺专家智能体) |
+| AG-006 | 入职助手 | 🟡 | P1 | frontend/src/app/admin/agents/page.tsx |
+| AG-007 | IT帮助台 | 🟡 | P1 | frontend/src/app/admin/agents/page.tsx |
+
+> 💡 智能体系统前端UI已完成：6种智能体类型、权限设置、用户对话界面
 
 #### 2.3 培训考试系统
 
 | ID | 功能 | 状态 | 优先级 | 对应代码 |
 |----|------|------|--------|----------|
-| TR-001 | 培训场景管理 | 🔴 | P0 | - |
-| TR-002 | 题库管理 | 🔴 | P0 | - |
+| TR-001 | 培训场景管理 | 🟡 | P0 | frontend/src/app/admin/training/scenes/page.tsx |
+| TR-002 | 题库管理 | 🟡 | P0 | frontend/src/app/admin/training/questions/page.tsx |
 | TR-003 | 智能组卷 | 🔴 | P1 | - |
-| TR-004 | 在线考试 | 🔴 | P0 | - |
-| TR-005 | 成绩分析 | 🔴 | P1 | - |
+| TR-004 | 在线考试 | 🟡 | P0 | frontend/src/app/admin/training/exams/page.tsx |
+| TR-005 | 成绩分析 | 🟡 | P1 | frontend/src/app/admin/training/records/page.tsx |
 | TR-006 | 证书颁发 | 🔴 | P2 | - |
+
+> 💡 培训考试前端UI已完成，包含场景管理、题库管理、试卷管理、考试记录
 
 #### 2.4 用户权限系统
 
 | ID | 功能 | 状态 | 优先级 | 对应代码 |
 |----|------|------|--------|----------|
-| US-001 | 用户管理 | 🔴 | P0 | - |
-| US-002 | 角色管理 | 🔴 | P0 | - |
+| US-001 | 用户管理 | 🟡 | P0 | frontend/src/app/admin/system/users/page.tsx |
+| US-002 | 角色管理 | 🟡 | P0 | frontend/src/app/admin/system/roles/page.tsx |
 | US-003 | 权限矩阵 | 🔴 | P0 | - |
-| US-004 | 部门组织 | 🔴 | P1 | - |
-| US-005 | 审计日志 | 🔴 | P1 | - |
+| US-004 | 部门组织 | 🟡 | P1 | frontend/src/app/admin/system/departments/page.tsx |
+| US-005 | 审计日志 | 🟡 | P1 | frontend/src/app/admin/system/logs/page.tsx |
+
+> 💡 系统管理前端UI已完成，包含用户、角色、部门、日志管理页面
 
 ---
 
@@ -305,6 +313,17 @@
 | 日期 | 版本 | 变更内容 | 操作人 |
 |------|------|----------|--------|
 | 2026-01-06 | 1.0 | 初始版本，完成需求梳理 | AI |
+| 2026-01-06 | 1.1 | 前端UI开发完成，更新功能状态 | AI |
+
+### 1.1 版本变更明细
+
+**前端页面开发完成：**
+- 知识库管理页面：支持13种文件格式展示、AI提取状态显示
+- 智能体管理页面：6种智能体类型、权限设置、对话测试
+- 控制台大屏：数据统计、智能体排行、系统状态监控
+- 用户对话界面：`/chat` 页面，智能体选择、多轮对话
+- 培训考试：场景管理、题库管理、试卷管理、考试记录
+- 系统管理：用户、角色、部门、日志管理
 
 ---
 
