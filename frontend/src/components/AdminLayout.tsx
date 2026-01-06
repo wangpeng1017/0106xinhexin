@@ -153,6 +153,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
         trigger={null}
         collapsible
         collapsed={collapsed}
+        theme="light"
         style={{
           overflow: 'auto',
           height: '100vh',
@@ -160,6 +161,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
           left: 0,
           top: 0,
           bottom: 0,
+          borderRight: '1px solid #f0f0f0',
         }}
       >
         {/* Logo */}
@@ -169,10 +171,10 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            color: '#fff',
+            color: '#1890ff',
             fontSize: collapsed ? 16 : 18,
             fontWeight: 600,
-            borderBottom: '1px solid rgba(255,255,255,0.1)',
+            borderBottom: '1px solid #f0f0f0',
           }}
         >
           {collapsed ? '新核芯' : '新核芯知识库'}
@@ -180,7 +182,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
 
         {/* 菜单 */}
         <Menu
-          theme="dark"
+          theme="light"
           mode="inline"
           selectedKeys={getSelectedKeys()}
           defaultOpenKeys={['/admin/training', '/admin/system']}
