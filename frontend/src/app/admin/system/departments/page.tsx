@@ -130,15 +130,15 @@ export default function DepartmentsPage() {
   }
 
   // 树形选择数据
-  const treeSelectData = departmentsData.map((node) => ({
-    title: node.title,
-    value: node.key,
+  const treeSelectData: any[] = departmentsData.map((node) => ({
+    title: node.title as string,
+    value: node.key as string,
     children: (node.children as DataNode[])?.map((child) => ({
-      title: child.title,
-      value: child.key,
+      title: child.title as string,
+      value: child.key as string,
       children: (child.children as DataNode[])?.map((grandChild) => ({
-        title: grandChild.title,
-        value: grandChild.key,
+        title: grandChild.title as string,
+        value: grandChild.key as string,
       })),
     })),
   }))
