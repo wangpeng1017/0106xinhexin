@@ -317,7 +317,7 @@ export default function KnowledgePage() {
             <Button type="link" size="small" icon={<EyeOutlined />} onClick={() => handleViewDetail(record)} />
           </Tooltip>
           <Tooltip title="下载">
-            <Button type="link" size="small" icon={<DownloadOutlined />} onClick={() => message.success(`开始下载 ${record.name}`)} />
+            <Button type="link" size="small" icon={<DownloadOutlined />} onClick={() => message.success(`开始下载 ${record.file_name}`)} />
           </Tooltip>
           <Tooltip title="重新提取">
             <Button type="link" size="small" icon={<RobotOutlined />} disabled={record.ai_status === 'processing'} />
