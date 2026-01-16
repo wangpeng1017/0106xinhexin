@@ -47,6 +47,7 @@ import {
   ClockCircleOutlined,
   CloseCircleOutlined,
   FileOutlined,
+  DownloadOutlined,
 } from '@ant-design/icons'
 import type { ColumnsType } from 'antd/es/table'
 import type { UploadProps } from 'antd'
@@ -309,11 +310,14 @@ export default function KnowledgePage() {
     {
       title: '操作',
       key: 'action',
-      width: 150,
+      width: 180,
       render: (_, record) => (
         <Space>
           <Tooltip title="查看详情">
             <Button type="link" size="small" icon={<EyeOutlined />} onClick={() => handleViewDetail(record)} />
+          </Tooltip>
+          <Tooltip title="下载">
+            <Button type="link" size="small" icon={<DownloadOutlined />} onClick={() => message.success(`开始下载 ${record.name}`)} />
           </Tooltip>
           <Tooltip title="重新提取">
             <Button type="link" size="small" icon={<RobotOutlined />} disabled={record.ai_status === 'processing'} />
